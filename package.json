@@ -1,0 +1,44 @@
+{
+  "name": "djvuefileinput",
+  "version": "1.0.0",
+  "description": "The best and simplest model based validator for Vue 3, UI independent and no dependency",
+  "keywords": [
+    "vue",
+    "vue3",
+    "form",
+    "validation",
+    "input",
+    "error",
+    "model",
+    "validator",
+    "component"
+  ],
+  "author": {
+    "name": "David Esneyder Jerez Garnica",
+    "email": "esneyderg357@gmail.com"
+  },
+  "license": "GPL v3",
+  "main": "dist/djvalidatorvue.min.js",
+  "module": "dist/DjValidatorVue.umd.min.js",
+  "unpkg": "dist/djvalidatorvue.min.js",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esneyderg357/DjValidatorVue"
+  },
+  "homepage": "https://github.com/esneyderg357/DjValidatorVue-docs",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.46.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0"
+  }
+}
