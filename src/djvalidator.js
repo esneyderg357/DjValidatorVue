@@ -2,22 +2,20 @@ import { isReactive,isRef,toRaw } from 'vue'
 import validators from './validators'
 import messages from './messages'
 import {required} from './functions'
-import { isArray } from 'chart.js/helpers'
 function validate(model, validations, errors) {
-    if(model&&isReactive(model))model=toRaw(model)
-
+    if(model&&isReactive(model))model=toRaw(model);
     if (model !== null && typeof model !== 'object' && !Array.isArray(model)) {
         throw new Error("Model is not object")
     }
     
-    clear_errors(errors)
+    clean_errors(errors)
 
     //validar todo el model:
     let valid = true
     for (const [input, value] of Object.entries(model)) {
-        let validation=validations[input];
+        let validation=validations[input]
         if (validation==undefined) continue
-        if (!isArray(validation))validation=[validation];
+        if (!Array.isArray(validation))validation=[validation]
         for(const v of validation){
             let resp = validate_field(input,model, v , errors)
             valid = (resp == true ? valid : (resp == false ? false : valid))
@@ -48,7 +46,7 @@ function validate_field(input,model,validation,errors) {
         //buscar validador correspondiente
         let params=validation.rule.split(",")
         let validator=validators.find(v=>v.key==params[0]);
-        if(!validator)throw new Error("'"+params[0]+"' is not a valid DjValidator key.")
+        if(!validator)throw new Error("'"+params[0]+"' is not a valid DjValidator rule.")
         
         //si el campo esta relacionado a otro (ref), ignorar el valor de required
         if(validator.ref&&validator.ref==true)delete errors[input]
@@ -84,7 +82,7 @@ function validate_field(input,model,validation,errors) {
     return true
 }
 
-function clear_errors(errors){
+function clean_errors(errors){
     for (const key in errors) delete errors[key]
 }
 
@@ -101,4 +99,4 @@ function set_messages(new_messages){
     Object.assign(messages, new_messages)
 }
 
-export { validate, validate_field, validate_var, clear_errors, add_validator, set_messages }
+export { validate, validate_field, validate_var, clean_errors, add_validator, set_messages }

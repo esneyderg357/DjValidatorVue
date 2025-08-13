@@ -18,7 +18,7 @@ Available in English, Russian and Spanish.
 - Without dependency
 - UI independent
 
-[SHOW DEMO HERE!!!](https://esneyderg357.github.io/DjValidatorVue-docs/demo.html)
+[SHOW DEMO HERE!!!](https://esneyderg357.github.io/DjValidatorVue-docs)
 
 ## Install
 
@@ -92,14 +92,14 @@ You can also validate individual variables with validate_var.
 
 ### Clear errors:
 
-To clear errors and stop displaying them you can use clear_errors.
+To clear errors and stop displaying them you can use clean_errors.
 
-	import {clear_errors} from 'djvalidatorvue'
+	import {clean_errors} from 'djvalidatorvue'
 
 	let errors=reactive({})
 
 	function open_form(){
-		clear_errors(errors)
+		clean_errors(errors)
 	}
 
 	

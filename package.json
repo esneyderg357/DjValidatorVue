@@ -18,14 +18,17 @@
     "email": "esneyderg357@gmail.com"
   },
   "license": "GPL v3",
-  "main": "dist/djvalidatorvue.min.js",
-  "module": "dist/DjValidatorVue.umd.min.js",
-  "unpkg": "dist/djvalidatorvue.min.js",
-  "type": "module",
-  "files": [
-    "dist",
-    "index.js"
-  ],
+  "main": "dist/DjValidatorVue.umd.min.js",
+  "module": "dist/DjValidatorVue.esm.min.js",
+  "browser": "dist/djvalidatorvue.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/DjValidatorVue.esm.min.js",
+      "require": "./dist/DjValidatorVue.umd.min.js",
+      "browser": "./dist/DjValidatorVue.min.js"
+    }
+  },
+  "files": ["dist"],
   "peerDependencies": {
     "vue": "^3.0.0"
   },
