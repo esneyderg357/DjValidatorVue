@@ -88,8 +88,11 @@ function clean_errors(errors){
 
 function add_validator(key,func,message){
     validators.push({'key':key,'func':(name,model,params,errors,msg)=>{
-        if(func(name,model,params,errors,msg)==false){
+        if(func(name,model,params)==false){
             errors[name]=msg||message
+            for(let i=1;i<params.length;i++){
+                errors[name]=errors[name].replace("$"+i,params[i])
+            }
             return false
         } 
     }})
