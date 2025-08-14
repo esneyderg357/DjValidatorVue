@@ -1,6 +1,6 @@
 {
-  "name": "djvuefileinput",
-  "version": "1.0.0",
+  "name": "djvalidatorvue",
+  "version": "1.0.1",
   "description": "The best and simplest model based validator for Vue 3, UI independent and no dependency",
   "keywords": [
     "vue",
@@ -29,6 +29,7 @@
     }
   },
   "files": ["dist"],
+  "types": "index.d.ts",
   "peerDependencies": {
     "vue": "^3.0.0"
   },
@@ -36,7 +37,7 @@
     "type": "git",
     "url": "https://github.com/esneyderg357/DjValidatorVue"
   },
-  "homepage": "https://github.com/esneyderg357/DjValidatorVue-docs",
+  "homepage": "https://esneyderg357.github.io/DjValidatorVue-docs/",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
