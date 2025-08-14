@@ -1,6 +1,6 @@
 {
   "name": "djvalidatorvue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The best and simplest model based validator for Vue 3, UI independent and no dependency",
   "keywords": [
     "vue",

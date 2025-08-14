@@ -1,6 +1,6 @@
 # DjValidatorVue -	Form model based validation for Vue3
 
-Version 1.0.0
+Version 1
 
 THE SIMPLEST VUE VALIDATION LIBRARY!
 
